@@ -1,0 +1,25 @@
+package cn.tedu.knows.portal.service;
+
+import cn.tedu.knows.portal.model.Comment;
+import cn.tedu.knows.portal.vo.CommentVo;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author tedu.cn
+ * @since 2022-02-24
+ */
+public interface ICommentService extends IService<Comment> {
+    //新增评论的义务逻辑层方法
+    Comment saveComment(CommentVo commentVo,String username);
+    // 按评论id删除评论的业务逻辑层方法
+    boolean removeComment(Integer commentId,String username);
+
+    // 修改评论内容的业务逻辑层方法
+    Comment updateComment(Integer commentId,CommentVo commentVo,String Username);
+
+
+}
