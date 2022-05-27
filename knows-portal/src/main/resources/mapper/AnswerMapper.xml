@@ -16,6 +16,8 @@ namespace
         <result column="quest_id" property="questId" />
         <result column="createtime" property="createtime" />
         <result column="accept_status" property="acceptStatus" />
+
+
         <!--
             配置collection标签,
             将查询结果中Comment对象保存在当前回答Answer对象中
@@ -59,4 +61,5 @@ namespace
         WHERE quest_id=#{id}
         ORDER BY a.id
     </select>
+
 </mapper>
